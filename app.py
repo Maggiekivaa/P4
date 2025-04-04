@@ -48,7 +48,7 @@ def get_heroes(heroes_id):
         new_heroes = heroes(name=data['name'])
         db.session.add(new_heroes)
         db.session.commit()
-        return jsonify(new_student.to_dict()), 201
+        return jsonify(new_heroes.to_dict()), 201
     except KeyError:
         return jsonify({ "errors": ["validation errors"]}), 400
 
